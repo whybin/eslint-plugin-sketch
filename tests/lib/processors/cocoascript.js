@@ -5,7 +5,7 @@ let cli;
 describe('CocoaScript', function () {
     before(function () {
         cli = new CLIEngine({
-            useEslintrc: false,
+            useEslintrc: false
         });
 
         cli.addPlugin('eslint-plugin-sketch', {
@@ -18,7 +18,7 @@ describe('CocoaScript', function () {
 
     describe('#preprocess', function () {
         it('should replace @import directives', function () {
-            const { results, errorCount, warningCount } =
+            const { errorCount, warningCount } =
                 cli.executeOnText('@import "test";', 'test.js');
 
             assert.strictEqual(errorCount, 0);
