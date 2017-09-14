@@ -34,5 +34,16 @@ describe('CocoaScript', function () {
             assert.strictEqual(results[0].messages[0].message,
                 'Parsing error: Unexpected character \'@\'');
         });
+
+        it('preserves line locations of subsequent errors/warnings', function () {
+            const { results, errorCount, warningCount } =
+                cli.executeOnText('@import "test";\n@', 'test.js');
+
+            assert.strictEqual(errorCount, 1);
+            assert.strictEqual(warningCount, 0);
+            assert.strictEqual(results[0].messages[0].message,
+                'Parsing error: Unexpected character \'@\'');
+            assert.strictEqual(results[0].messages[0].line, 2);
+        });
     });
 });
