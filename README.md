@@ -5,6 +5,8 @@ Lint files for Sketch plugins.
 ## Features
 
 * Removes `@import` directives prior to linting (one `@import` directive per line)
+* [TODO] Add CocoaScript globals
+* [TODO] Preprocess Objective-C bracket syntax
 
 ## Installation
 
