@@ -2,6 +2,10 @@
 
 Lint files for Sketch plugins.
 
+## Features
+
+* Removes `@import` directives prior to linting (one `@import` directive per line)
+
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
@@ -12,11 +16,15 @@ $ npm i eslint --save-dev
 
 Next, install `eslint-plugin-sketch`:
 
-```
-$ npm install eslint-plugin-sketch --save-dev
-```
+**Note:** This plugin is not a published `npm` package. Later versions may be published.
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-sketch` globally.
+```
+$ cd <path to wherever>
+$ git clone https://github.com/whybin/eslint-plugin-sketch.git
+$ npm link
+$ cd <path to your project>
+$ npm link eslint-plugin-sketch
+```
 
 ## Usage
 
@@ -43,9 +51,11 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+## Uninstallation
 
+Same as for uninstalling registered `npm` packages:
 
-
-
-
+```
+$ cd <path to project>
+$ npm uninstall eslint-plugin-sketch
+```
