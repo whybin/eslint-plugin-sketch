@@ -8,6 +8,7 @@
         "eslint-plugin"
     ],
     "author": "whybin",
+    "repository": "https://github.com/whybin/eslint-plugin-sketch",
     "main": "lib/index.js",
     "scripts": {
         "test": "mocha tests --recursive"
